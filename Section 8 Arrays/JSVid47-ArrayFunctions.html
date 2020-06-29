@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--Asking for the index of an element that is not part of an array gives -1 
+Push adds to array, pop takes from array
+Sort function sorts text alphabetically-->
+<html>
+    <head>
+        <title></title>
+        <script>
+            window.onload = function()
+            {
+                years = [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2007, 2008]
+                years.push(2009);
+                years.push(2010);
+                years.pop();
+                years.forEach(myFunction);
+                console.log(years.indexOf(123));
+                console.log(years.indexOf(2010));
+                
+                names = ["Bob", "Sally", "Adam", "Alex"]
+                console.log(names.sort());
+            }
+            function myFunction(item, index)
+            {
+                document.getElementById('result').innerHTML += index + "|" + item + "<br/>";
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>

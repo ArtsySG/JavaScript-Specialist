@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessing and Editing Array Elements</title>
+        <script>
+            window.onload = function()
+            {
+                var cars = ["Cougar", "Jeep", "Corolla", "Audi", "BMW", "Toyota"];
+                console.log(cars.length);
+                var out = "";
+                for(var x = 0; x < cars.length; x++)
+                {
+                    out += cars[x] + "<br/>";
+                }
+                out +=  "<br/>";
+                var cities = ["Philadephia", "Pittsburg", "Shippensburg", "Harrisburg"];
+                
+                for(var x = 0; x < cities.length; x++)
+                {
+                    out += "City " + (x+1) + ":" + cities[x] + "<br/>";
+                }
+                document.getElementById('result').innerHTML = out;
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>

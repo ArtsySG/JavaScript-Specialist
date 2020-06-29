@@ -1,0 +1,12 @@
+/pattern/modifiers
+
+var pattern = /LearningToProgram.tv/i;
+    pattern assigned to variable
+    i is case insensitive match
+    
+var globalMatchPattern = /LearningToProgram.tv/g;
+    Do NOT use "quotes"
+    
+[abc] Finds a, b, or c.
+[0-3] Finds 0, 1, 2, 3.
+(ab|xy) Finds any alternative separated by |(pipe symbol)

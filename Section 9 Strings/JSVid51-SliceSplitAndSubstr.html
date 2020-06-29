@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>slice(), split(), and substr()</title>
+        <script>
+            window.onload = function()
+            {
+                var myString = "If you are strong enough, there are no  precedents."
+                var newString = myString.slice(0, 25);
+                console.log(newString);
+                
+                var csv = "Scott, LeahAnn, Xavier, Autumn, Tala, Logan";
+                var familyArray = csv.split(",");
+                console.log(familyArray);
+                
+                for (var x = 0; x < familyArray.length; x++)
+                    {
+                        document.getElementById('result').innerHTML += familyArray[x] + "<br/>";
+                    }
+                
+                var theString = "Kings Kaleidoscope is the world's greatest band."
+                document.getElementById('result').innerHTML += theString.substr(0, 18);
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>

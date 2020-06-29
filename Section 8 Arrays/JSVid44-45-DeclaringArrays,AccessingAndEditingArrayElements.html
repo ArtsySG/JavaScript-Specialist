@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Declaring Arrays</title>
+        <script>
+            window.onload = function()
+            {
+                teams = ["Yankees", "Mets", "Giants", "Jets"]
+                console.log(teams);
+                
+                computers = new Array("Compaq", "Macintosh", "Commodore 64", "Osborn Pro")
+                console.log(computers);
+                
+                family = []; //empty array to be populated later
+                
+                document.getElementById('result').innerHTML = computers[3];
+                document.getElementById('result').innerHTML += "<br/>" + teams[2];
+                
+                family[0] = "Scott";
+                family[1] = "LeahAnn";
+                family[2] = "Xavier";
+                family[3] = "Autumn";
+                family[4] = "Tala";
+                family[5] = "Logan";
+                
+                document.getElementById('result').innerHTML += "<br/>" + family[2];
+                
+                computers[100] = "Windows";
+                
+                document.getElementById('result').innerHTML += "<br/>" + computers[100];
+                
+                computers[3] = "Amiga";
+                
+                document.getElementById('result').innerHTML += "<br/>" + computers[3];
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>
+<!--Notes:
+Index always starts at 0-->

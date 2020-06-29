@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Setting A Custom Date and Time</title>
+        <script>
+            window.onload = function()
+            {
+                var d = new Date(2020,6,28, 12,00);
+                var d2 = new Date(2020,6,30, 12,00);
+                document.getElementById('result').innerHTML = "Yesterday: " + d + "<br/><br/>Tomorrow: " + d2;
+                console.log(d.getDate());
+                
+                var c = new Date();
+                document.getElementById('result').innerHTML += "<br/><br/>" + Date.now(); //Milliseconds since Unix Epoch
+                
+                var d3 = Date.now() - (365 * 24 * 60 * 60);
+                document.getElementById('result').innerHTML += "<br/><br/>" + d3;
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>
