@@ -1,0 +1,41 @@
+<!--Javascript  Specialist: Video 35, Mouse Events
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Events</title>
+        <style>
+            #target
+            {
+                width: 400px;
+                height: 400px;
+                background-color: firebrick;
+            }
+        </style>
+        <script>
+            var target;
+            var result;
+            window.onload = function()
+            {
+                target = document.getElementById('target');
+                result = document.getElementById('result');
+                target.onclick = function()
+                {
+                    result.innerHTML = "Click Event!";
+                }
+                
+                target.addEventListener('mouseover', function(){result.innerHTML = "Mouse Over Event!";})
+                
+                target.onmouseout =  function()
+                {
+                    result.innerHTML = "Mouse Out!"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "target"></div>
+        <div id = "result"></div>
+    </body>
+</html>

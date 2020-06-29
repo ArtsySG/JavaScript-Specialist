@@ -1,0 +1,36 @@
+<!--Javascript  Specialist: Video 16, If...Else Statements 
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If...Else Statements</title>
+        <script>
+        window.onload = function()
+        {
+            document.getElementById('btnOne').addEventListener('click', btnClicked);
+            document.getElementById('btnTwo').addEventListener('click', btnClicked);
+        }
+        function btnClicked(e)
+            {
+                alert("You pressed a button.");
+                console.log(e.target.id);
+                    if(e.target.id == "btnOne")
+                        {
+                            alert("You pushed Button 1");
+                        }
+                    else
+                        {
+                            alert("You pushed Button 2"); 
+                        }
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result">
+            <button id = "btnOne">Button 1</button>
+            <button id = "btnTwo">Button 2</button>
+        </div>
+        
+    </body>
+</html>

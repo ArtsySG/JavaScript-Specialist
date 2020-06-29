@@ -1,0 +1,34 @@
+<!--Javascript  Specialist: Video 15, If Statements 
+Notes: How JS makes decisions
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If Statements</title>
+        <script>
+        window.onload = function()
+        {
+            var age = 18;
+            var citizen = true;
+            /*if (age == 18)
+                {
+                    document.getElementById('result').innerHTML = "<h1>You need to register to vote. </h1>";
+                }*/
+            if (age >= 18 && citizen == true)
+                {
+                    document.getElementById('result').innerHTML = "<h1>You may legally vote. </h1>";
+                }
+            
+            var movieAge = 15;
+            var parent = true;
+            if (movieAge >= 17 || parent == true)
+                {
+                    document.getElementById('result').innerHTML += "You may see the movie.";
+                }
+        }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>

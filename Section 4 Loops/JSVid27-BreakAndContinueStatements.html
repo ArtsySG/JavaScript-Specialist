@@ -1,0 +1,40 @@
+<!--Javascript  Specialist: Video 27, Break and Continue Statements
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Break and Continue Statements</title>
+        <script>
+        window.onload = function()
+        {
+            var x = 0;
+            while (x < 50)
+            {
+                if (x%2 == 0)
+                {
+                    console.log(x)
+                    x++;
+                    continue;
+                }
+                document.getElementById('result').innerHTML += (x + "<br/>");
+                x++;
+            }
+            
+            /*var y = 0;
+            while (y < 15)
+            {
+                document.getElementById('result').innerHTML += y + "<br/>";
+                y++;
+                if (y == 11)
+                {
+                    break;
+                }
+            }*/
+        }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>

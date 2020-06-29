@@ -1,0 +1,28 @@
+<!--Javascript  Specialist: Video 36, Keyboard Events
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Events</title>
+        <script>
+            window.onload = function(e)
+            {
+                var textBox = document.getElementById('myText');
+                textBox.onkeypress = function(e)
+                {
+                    console.log(e);
+                    if(e.key == "E" && e.shiftKey == true)
+                        {
+                            textBox.style.display = "none";
+                        }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+        <label for = "myText">Type Here:</label>
+        <input type = "Test" id = "myText"/>
+    </body>
+</html>

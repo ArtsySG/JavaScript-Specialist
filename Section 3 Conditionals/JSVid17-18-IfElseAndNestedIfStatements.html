@@ -1,0 +1,54 @@
+<!--Javascript  Specialist: Video 17- If...Else If Statements, Video 18- Nested If Statements
+Notes: Use else if for multiple different options 
+Anticipate user error
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If...Else If and Nested If Statements</title>
+        <script>
+        window.onload = function()
+        {
+            document.getElementById('btnShow').addEventListener('click', determineGrade)
+        }
+        function determineGrade(e)
+            {
+                var numberGrade = document.getElementById('numberGrade').value;
+                if (numberGrade >= 0 && numberGrade <=100) {
+                    if (numberGrade >= 90)
+                    {
+                        letterGrade = 'A';
+                    }
+                    else if (numberGrade >= 80)
+                    {
+                        letterGrade = 'B';
+                    }
+                    else if (numberGrade >= 70)
+                    {
+                        letterGrade = 'C';
+                    }
+                    else if (numberGrade >= 60)
+                    {
+                        letterGrade = 'D';
+                    }
+                    else
+                    {
+                        letterGrade = 'F';
+                    }
+                }
+                else
+                    {
+                        document.getElementById('result').innerHTML = "<h1>Please enter a valid grade.</h1>";
+                    }
+                document.getElementById('result').innerHTML = "<h1>" + letterGrade + "</h1>";
+            }
+        </script>
+    </head>
+    <body>
+        <label for "numberGrade">Numerical Grade</label>
+        <input type = "number" min = "0" max = "100" id = "numberGrade"/>
+        <button id = "btnShow">Show Letter Grade</button>
+        <div id = "result"></div>
+        
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!--Javascript  Specialist: Video 11, Javascript Math Functions
+Notes: Some math functions: Pi, Square root, Absolute Value, Round, Random-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Math Functions</title>
+        <script>
+            window.onload = function()
+            {
+                var out = "";
+                out += "Pi is: " + Math.PI;
+                out += "<br/><br/>The square root of 81 is: " + Math.sqrt(81);
+                out += "<br/><br/>The absolute value of -81 is: " + Math.abs(-81);
+                out += "<br/><br/>The rounded value of 81.123 is: " + Math.round(81.123);
+                out += "<br/><br/>The rounded value of pi is: " + Math.round(Math.PI);
+                out += "<br/><br/>Here's a random number: " + Math.random();
+                out += "<br/><br/>Here's a random number between 1 and 10: " + (Math.floor(Math.random()*10)+1);
+                document.getElementById('result').innerHTML = out;
+            }            
+        </script>
+    </head>
+    <body>
+        <p id = "result">Words here.</p>
+    </body>
+</html>

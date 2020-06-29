@@ -1,0 +1,38 @@
+<!--Javascript  Specialist: Video 31, Function Parameters
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Parameters- Batting Average</title>
+        <script>
+        window.onload = function()
+        {
+            document.getElementById('calculate').addEventListener('click',getValues);
+        }
+        function getValues()
+        {
+            atBats = parseFloat(document.getElementById('atBatsInput').value);
+            hits = parseFloat(document.getElementById('hitsInput').value);
+            walks = parseFloat(document.getElementById('walksInput').value);
+            calculateBattingAverage(atBats, hits, walks);
+        }
+        function calculateBattingAverage (atBats, hits, walks)
+            {
+                var battingAverage = hits / (atBats - walks);
+                document.getElementById('result').innerHTML = battingAverage;
+            }
+        </script>
+    </head>
+    <body>
+        <label for = "atBatsInput">At Bats:</label><br/>
+        <input type = "number" id = "atBatsInput"/><br/>
+        <label for = "hitsInput">Hits:</label><br/>
+        <input type = "number" id = "hitsInput"/><br/>
+        <label for = "walksInput">Walks:</label><br/>
+        <input type = "number" id = "walksInput"/><br/><br/>
+        <button id = "calculate">Calculate Batting Average</button><br/>
+        <label for = "result">Batting Average:</label><br/>
+        <div id = "result"></div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!--Javascript  Specialist: Video 33, Anonymous Functions
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anonymous Functions</title>
+        <script>
+            window.onload = function()
+            {
+                alert("window.onload!")
+                btnPress = document.getElementById("myButton");
+                btnPress.onclick = function()
+                {
+                    alert("Thanks for pressing me!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+        <button id = "myButton">Press Me!</button>
+    </body>
+</html>

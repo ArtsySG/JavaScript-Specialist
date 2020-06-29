@@ -1,0 +1,30 @@
+<!--Javascript Specialist Video 8: Declaring and Initializing Variables
+Notes:
+Declare variable with var
+Initalizing in and out of line
+Scope: where variables are visable and accessible-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Declaring and Initializing Variables</title>
+        <script>  
+            var score;
+            window.onload = function()
+            { 
+                score = 1000;
+                var age = 42;
+                out ();
+                document.getElementById('result').innerHTML = score;
+                document.getElementById('result2').innerHTML = "Age: " + age;
+            }      
+            function out()
+            {
+                document.getElementById('result').innerHTML = score;
+            }
+        </script>
+    </head>      
+    <body>
+        <div id = "result"></div>
+        <div id = "result2"></div>
+    </body>
+</html>

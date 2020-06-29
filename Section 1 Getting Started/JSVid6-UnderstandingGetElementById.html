@@ -1,0 +1,36 @@
+<!--Javascript Specialist Video 6: Understanding getElementById()
+Notes: getElementById gets everything in an element
+    -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Understanding getElementById</title>
+        <script>  
+            window.onload = function()
+            {
+                document.getElementById('content').addEventListener('click', respond);
+                document.getElementById('one').addEventListener('click', respondOne);
+                document.getElementById('two').addEventListener('click', respondTwo);
+
+            }
+            function respond(e)
+            {
+                console.log('You clicked content.')
+                document.getElementById('content').style.color = "red";
+            }
+            function respondOne(e)
+            {
+                console.log('You clicked sentence one.')
+            }
+            function respondTwo(e)
+            {
+                console.log('You clicked sentence two.')
+            }
+        </script>
+    </head>      
+    <body>
+        <div id = "content">
+            <p id = "one">This is sentence one.</p>
+            <p id = "two">This is sentence two.</p>
+    </body>
+</html>

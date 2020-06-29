@@ -1,0 +1,45 @@
+<!--Javascript  Specialist: Video 28, Calculating Simple Interest
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Break and Continue Statements</title>
+        <script>
+        window.onload = function()
+        {
+            document.getElementById('btnCalc').addEventListener('click',calculateInterest);
+        }
+        function calculateInterest(e)
+        {
+            var amount = parseFloat(document.getElementById('amount').value);
+            var term = parseFloat(document.getElementById('term').value);
+            var interest = parseFloat(document.getElementById('interest').value);
+            
+            /*console.log(amount);
+            console.log(term);
+            console.log(interest);*/
+            
+            var x = 0;
+            var out = "";
+            while(x < term)
+            {
+                amount = amount * (1 + (interest/12));
+                out += "Month " + (x+1) + ": $" + amount.toFixed(2) + "<br/>";
+                x++;
+            }
+            document.getElementById('result').innerHTML = out;
+        }
+        </script>
+    </head>
+    <body>
+        <label for "amount">Amount Invested:</label>
+        <input type = "number" id = "amount"/><br/>
+        <label for "term">How many months:</label>
+        <input type = "number" id = "term"/><br/>
+        <label for "interest">Interest Rate:</label>
+        <input type = "number" id = "interest"/><br/>
+        <button id = "btnCalc">Calculate Interest</button>
+        <div id = "result"></div>
+    </body>
+</html>

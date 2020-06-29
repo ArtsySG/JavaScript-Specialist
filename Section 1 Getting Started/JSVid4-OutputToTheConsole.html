@@ -1,0 +1,28 @@
+<!--Javascript Specialist Video 4: Output to the Console
+Notes: 
+    Outputting to console is great for programmer, but user needs things output to the browser.
+    This can be used to track variables, list strings, and much more.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vid4</title>
+        <script>
+            var clicks = 0;
+            window.onload = function()
+            {
+                console.log("window.onload run...");
+                document.getElementById('myButton').addEventListener('click', respond);
+            }
+            function respond(e)
+            {
+                clicks++;
+                console.log("Button pressed " + clicks + " time(s).");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Output to the Console</h1>
+        <button id = "myButton">Click Me!</button>
+    </body>
+   
+</html>

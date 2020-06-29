@@ -1,0 +1,39 @@
+<!--Javascript  Specialist: Video 13, Javascript Guessing Game 
+Notes: Use iterative testing, check as you go
+Use globally declared variable if needed everywhere
+Wrote code!
+Got a user input, checked against randomly computer generated number
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Guessing Game</title>
+        <script>
+            var randomNumber;
+            window.onload = function()
+            {
+                randomNumber = Math.floor((Math.random()*10)+1);
+                console.log(randomNumber);
+                document.getElementById('btnCheck').addEventListener('click', checkGuess)
+            }            
+            function checkGuess(e)
+            {
+                var userGuess = document.getElementById('guess').value;
+                if (userGuess == randomNumber)
+                    {
+                        document.getElementById('result').innerHTML = "You guessed right!";
+                    }
+                else
+                    {
+                        document.getElementById('result').innerHTML = "You guessed wrong.";
+                    }
+            }
+        </script>
+    </head>
+    <body>
+        <label for = "guess">Guess a number between 1 and 10</label>
+        <input type = "number" min = "1" max = "10" id = "guess">
+        <button id = "btnCheck">Am I Right?</button>
+        <div id = "result"></div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!--Javascript  Specialist: Video 32, The Return Statement
+Notes: Make functions portable (independent of environment)
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Return Statement</title>
+        <script>
+            function addThese(a,b)
+            {
+                var c = a + b;
+                return c;
+            }
+            function subtractThese(a,b)
+            {
+                var c = a - b;
+                return c;
+            }
+            function multiplyThese(a,b)
+            {
+                var c = a * b;
+                return c;
+            }
+            
+            window.onload = function()
+            {
+                var x = 215;
+                var y = 115.5; 
+                
+                var sum = addThese(x,y);
+                document.getElementById('result').innerHTML = sum; 
+                document.getElementById('result').innerHTML += "<br/>" + multiplyThese(x,y);
+                document.getElementById('result').innerHTML += "<br/>" + subtractThese(x,y);
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>

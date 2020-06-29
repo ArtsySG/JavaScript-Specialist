@@ -1,0 +1,26 @@
+<!--Javascript  Specialist: Video 30, Defining a Simple Function and Function Calls
+Notes: Modularize your code
+Name your functions according to what it does
+Can call functions in the html, but it is not recommended
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Defining a Simple Function and Function Calls</title>
+        <script>
+        function greeting()
+        {
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "<h1>Greeting!</h1>"
+        }
+        window.onload = function()
+        {
+            document.getElementById('btnGreet').addEventListener('click',greeting);
+        }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+        <button id = "btnGreet">Greet Me!</button>
+    </body>
+</html>

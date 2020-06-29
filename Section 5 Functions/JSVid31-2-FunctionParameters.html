@@ -1,0 +1,32 @@
+<!--Javascript  Specialist: Video 31, Function Parameters
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Parameters</title>
+        <script>
+            window.onload = function()
+            {
+                document.getElementById('btnCalc').addEventListener('click',getHumanYears);
+            }
+            function getHumanYears()
+            {
+                ageInHumanYears = parseFloat(document.getElementById('ageInHumanYearIn').value);
+                calculateDogYears(ageInHumanYears);
+            }
+            function calculateDogYears(ageInHumanYears)
+            {
+                var dogYears = ageInHumanYears * 7;
+                document.getElementById('result').innerHTML = "<h1>" + dogYears + "<h1>";
+                console.log(dogYears);
+            }
+        </script>
+    </head>
+    <body>
+        <label for = "ageInHumanYearIn">Input your dog's age in human years:</label><br/>
+        <input type = "number" id = "ageInHumanYearIn" min = 0><br/><br/>
+        <button id = "btnCalc">Calculate Dog Years!</button><br/><br/>
+        <div id = "result"></div>
+    </body>
+</html>

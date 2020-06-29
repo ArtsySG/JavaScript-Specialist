@@ -1,0 +1,41 @@
+<!--Javascript  Specialist: Video 24, Javascript Program: For Loops
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For Loops</title>
+        <script>
+        window.onload = function()
+        {
+            var out = "";
+            for (var y = 100; y > 0; y--)
+            {
+                if(y%2 == 1)
+                   {
+                       out += y + "<br/>";
+                   }
+                        document.getElementById('result').innerHTML = out;
+            }
+            
+            /*var out = "";
+            for (var x = 100; x > 0; x -= 2)
+                {
+                    out += x + "<br/>";
+                }
+                document.getElementById('result').innerHTML = out;*/
+            
+                 /*var out = "";
+            for(var counter = 0; counter < 45; counter++)
+                {
+                    out += counter + "<br/>";
+                }
+                    document.getElementById('result').innerHTML = out;*/
+            
+        }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!--Javascript  Specialist: Video 20, Javascript Program: Calculating Bonuses
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Program: Calculating Bonuses</title>
+        <script>
+        window.onload = function()
+        {
+           document.getElementById('btnBonus').addEventListener('click', calculateBonus);
+        }
+        function calculateBonus(e)
+            {
+                var sales = document.getElementById('salesTotal').value;
+                var bonusPercent;
+                if (sales > 100000)
+                    {
+                        bonusPercent = .005;
+                    }
+                if (sales > 200000)
+                    {
+                        bonusPercent = .006;
+                    }
+                if (sales > 300000)
+                    {
+                        bonusPercent = .007;
+                    }
+                if (sales > 400000)
+                    {
+                        bonusPercent = .01;
+                    }
+                //console.log(bonusPercent);
+                var amountOfBonus = sales * bonusPercent;
+            document.getElementById('result').innerHTML =  amountOfBonus;
+            console.log(amountOfBonus);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <label for "salesTotal">Enter Total Sales:</label>
+        <input type = "number" id = "salesTotal">
+        <button id = "btnBonus">Process Bonus</button>
+        <div id = "result"></div>
+    </body>
+</html>

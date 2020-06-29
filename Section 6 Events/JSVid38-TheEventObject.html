@@ -1,0 +1,56 @@
+<!--Javascript  Specialist: Video 38, The Event Object
+Notes: 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Object</title>
+        <style>
+            #targetA, #targetB
+            {
+                width: 200px;
+                height: 200px;
+            }
+            #targetA
+            {
+                background-color: #900;
+            }
+            #targetB
+            {
+                background-color: #009;
+                margin-top: 20px; 
+            }
+        </style>
+        <script>
+            window.onload = function(e)
+            {
+                var a = document.getElementById('targetA');
+                var b = document.getElementById('targetB');
+                
+                a.addEventListener('click', processEvent);
+                b.addEventListener('click', processEvent);
+            }
+            function processEvent(e)
+            {
+                console.log(e);
+                if(e.target.id == 'targetA')
+                    {
+                        document.getElementById('result').innerHTML = "TargetA";
+                    }
+                else
+                    {
+                        document.getElementById('result').innerHTML = "TargetB";
+                    }
+                var xPos = e.clientX;
+                var yPos = e.clientY;
+                
+                document.getElementById('result').innerHTML += xPos + ", " + yPos;
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "targetA"></div>
+        <div id = "targetB"></div>
+        <div id = "result"></div>
+    </body>
+</html>

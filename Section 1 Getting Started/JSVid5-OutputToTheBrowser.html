@@ -1,0 +1,27 @@
+<!--Javascript Specialist Video 5: Output to the Browser
+Notes: 
+    Output to browser using innerHTML property
+    = changes content, += adds to content-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Output To Browser</title>
+        <script>
+            //document.write("Hello")
+            window.onload =  function()
+            {
+                document.getElementById('myButton').addEventListener('click',respond);
+            }
+            function respond(e)
+            {
+                document.getElementById('one').innerHTML += "<h1>Welcome to Autumn's World!</h1>";
+                document.getElementById('two').innerHTML += "<h2>Javascript Specialist Video 5</h2>";
+            }
+        </script>
+    </head>      
+    <body>
+        <div id = "one">This is Div One:</div>
+        <div id = "two">This is Div Two:</div>
+        <button id = "myButton">Click Me!</button>
+    </body>
+</html>

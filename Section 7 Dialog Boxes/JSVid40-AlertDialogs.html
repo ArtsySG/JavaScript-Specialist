@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alert Dialogs</title>
+        <script>
+            window.onload = function()
+            {
+                document.getElementById('myBtn').addEventListener('click', alertUser);
+            }
+            function alertUser(e)
+            {
+                alert("Button pressed!");
+                alert(e.target.id);
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+        <button id = "myBtn">Press Me</button>
+    </body>
+</html>

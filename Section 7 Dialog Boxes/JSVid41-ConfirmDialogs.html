@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Confirm Dialogs</title>
+        <script>
+            window.onload = function()
+            {
+                var returned = confirm("Are you ready?");
+                alert(returned);
+                if(returned)
+                    {
+                        alert("Glad your ready!");
+                    }
+                else
+                    {
+                        alert("Well, get ready.")
+                    }
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+    </body>
+</html>
+<!--OK: true, Cancel: false-->

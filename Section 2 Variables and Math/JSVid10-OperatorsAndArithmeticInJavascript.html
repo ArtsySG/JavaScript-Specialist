@@ -1,0 +1,25 @@
+<!--Javascript  Specialist: Video 10, Operators and Arithmetic in Javascript-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math with Variables</title>
+        <script>
+            window.onload = function()
+            {
+                var operandInt = 13;
+                var operandFloat = 13.5;
+                var out = "";
+
+                out += operandInt + " + " + operandFloat + " = " + (operandInt + operandFloat);
+                out += operandInt + " - " + operandFloat + " = " + (operandInt - operandFloat);
+                out += operandInt + " * " + operandFloat + " = " + (operandInt * operandFloat);
+                out += operandInt + " / " + operandFloat + " = " + (operandInt / operandFloat);
+                
+                document.getElementById('result').innerHTML = out;
+            }            
+        </script>
+    </head>
+    <body>
+        <div id = 'result'></div>
+    </body>
+</html>
