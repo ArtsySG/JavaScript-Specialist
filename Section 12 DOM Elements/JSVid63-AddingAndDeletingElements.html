@@ -1,0 +1,31 @@
+<!--Notes:-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adding and Deleting Elements</title>
+        <script>
+        window.onload = function()
+        {
+            var theList = document.getElementById('myList');
+            var node = document.createElement("LI");
+            var text = document.createTextNode("Yes");//different than creating a string
+            node.appendChild(text);
+            console.log(node);
+            theList.appendChild(node);
+            
+            var node2 = document.createElement("LI");
+            var text2 = document.createTextNode("Worshp Initiative");
+            node2.appendChild(text2);
+            theList.appendChild(node2);
+            
+            theList.removeChild(theList.childNodes[5]);
+        }
+        </script>
+    </head>
+    <body>
+        <ul id = "myList">
+            <li>Shane and Shane</li>
+            <li>Kings Kaleidoscope</li>
+        </ul>
+    </body>
+</html>

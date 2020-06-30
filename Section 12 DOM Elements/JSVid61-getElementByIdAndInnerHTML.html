@@ -1,0 +1,23 @@
+<!--Notes: 
+innerHTML is a property which describes what's inside an element-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getElementById() and innerHTML</title>
+        <script>
+        window.onload = function()
+        {
+            console.log(document.getElementById('result'));
+            document.getElementById('result').innerHTML += "This element was added dynamically."
+        }
+        </script>
+    </head>
+    <body>
+        <h1>DOM Elements</h1>
+        <div id = "result">
+            <p>Manipulating the DOM is fun!</p>
+            <p>Javascript can be used to manipulate the DOM.</p>
+        </div>
+        
+    </body>
+</html>
