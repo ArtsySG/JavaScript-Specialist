@@ -1,0 +1,3 @@
+GEOCODE: https://maps.googleapis.com/maps/api/geocode/json?address=27%hartford%turnpike%vernon%ct&sensor=false
+
+MAP: http:maps.google.com?q=51.03841,-114.01679

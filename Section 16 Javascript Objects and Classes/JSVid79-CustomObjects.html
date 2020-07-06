@@ -1,0 +1,33 @@
+<!--Notes:-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+        <script>
+            var team = new Object();
+            team.name = "Bad News Bears";
+            team.wins = 100;
+            team.losses = 25;
+            team.captain = "Derek Jeter";
+            
+            window.onload = function()
+            {
+                document.getElementById('result').innerHTML = "<h1>" + team.name + "</h1>";
+                document.getElementById('result').innerHTML += "<h1>" + team.wins + "</h1>";                
+            }
+            function employee(ssn, name, salary)
+            {
+                this.socialNumber = ssn;
+                this.fullName = name;
+                this.pay = salary;
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+        <script>
+            var autumn = new employee("00-00-0000", "Autumn Garibay", 2000)
+            alert(autumn.fullName);
+        </script>
+    </body>
+</html>

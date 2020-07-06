@@ -1,0 +1,27 @@
+<!--Notes:-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fruit</title>
+        <script src = "JSVid80-JavascriptClasses.js"></script>
+        <script>
+            var apple;
+            window.onload = function()
+            {
+                apple = new Fruit("apple", "red", 100);
+                //var pear = new Fruit("pear", "green", 175);
+                
+                document.getElementById("result").innerHTML = "This apple is " + apple.weight + " grams.";
+                document.getElementById('biteBtn').addEventListener('click', bite);
+            }
+            function bite()
+            {
+                document.getElementById("result").innerHTML += "<br/>Bite taken. This apple is now " + apple.takeABite() + " grams.";
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "result"></div>
+        <button id = "biteBtn">TAKE A BITE</button>
+    </body>
+</html>

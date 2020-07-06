@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas</title>
+        <style>
+            #myCanvas
+            {
+                border: 1px solid black;
+            }
+        </style>
+        <script>
+            window.onload = function()
+            {
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext("2d");
+                
+                context.fillStyle = "yellow";
+                context.fillRect(10, 10, 465, 380);
+                
+                context.fillStyle = "#0000dd";
+                context.beginPath;
+                context.arc(250, 250, 100, 0, Math.PI);
+                context.stroke();
+                
+                context.moveTo(175,100);
+                context.fillStyle = "#0000dd";
+                context.arc(125, 100, 50, 0, 2 * Math.PI);
+                context.stroke();
+                
+                context.moveTo(400,100);
+                context.fillStyle = "#0000dd";
+                context.arc(350, 100, 50, 0, 2 * Math.PI);
+                context.stroke();
+                
+                /*context.moveTo(250, 250);
+                context.lineTo(0, 0);
+                context.moveTo(250, 250);
+                context.lineTo(500, 0);
+                context.stroke();*/
+                
+                
+                
+                
+                
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id = "myCanvas" width = "485px" height = "400px"></canvas>
+    </body>
+</html>
